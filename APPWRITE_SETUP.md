@@ -289,7 +289,7 @@ Your `.env.local` file should have:
 ```
 NEXT_PUBLIC_APPWRITE_ENDPOINT=https://fra.cloud.appwrite.io/v1
 NEXT_PUBLIC_APPWRITE_PROJECT_ID=68f2335f00047e77ef55
-NEXT_PUBLIC_GEMINI_API_KEY=AIzaSyClwLJenMrGbHIoPgPClZPtzl-NyGAHPKM
+NEXT_PUBLIC_GEMINI_API_KEY=your_api_key
 ```
 
 ---
