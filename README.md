@@ -1,4 +1,4 @@
-# 🎓 StudyGenius - Your AI-Powered Study Companion
+# 🎓 StudySphere AI - Your AI-Powered Study Companion
 
 > **Smart AI study app that helps students instantly solve doubts, create study plans, generate flashcards, and track progress.**
 
@@ -47,7 +47,7 @@
 
 ```bash
 # Clone or navigate to project
-cd studygenius
+cd studysphereai
 
 # Install dependencies (already done)
 # npm install
@@ -94,7 +94,7 @@ Uncomment authentication code in:
 ## 📁 Project Structure
 
 ```
-studygenius/
+studysphereai/
 ├── app/                    # Next.js pages
 │   ├── page.tsx           # Landing page
 │   ├── dashboard/         # Main dashboard
