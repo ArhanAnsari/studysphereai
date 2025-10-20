@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Home, MessageSquare, BookOpen, User, Target, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Logo } from '@/components/Logo';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -49,13 +50,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           {/* Logo */}
           <div className="p-6 border-b border-gray-200 dark:border-gray-800">
             <div className="flex items-center justify-between">
-              <Link href="/dashboard" className="flex items-center gap-2">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center text-white font-bold text-xl">
-                  SG
-                </div>
-                <span className="font-bold text-xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  StudyGenius
-                </span>
+              <Link href="/dashboard">
+                <Logo size="md" showText={true} />
               </Link>
               <button
                 onClick={onClose}

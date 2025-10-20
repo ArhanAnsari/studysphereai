@@ -53,7 +53,7 @@ export default function SignUpPage() {
 
     try {
       await authService.signUp(email, password, name);
-      success('Account created!', 'Welcome to StudyGenius! Redirecting to dashboard...');
+      success('Account created!', 'Welcome to StudySphere AI! Redirecting to dashboard...');
       router.push('/dashboard');
     } catch (error: any) {
       showError('Sign up failed', error.message || 'Please try again with different credentials.');
@@ -182,7 +182,7 @@ export default function SignUpPage() {
               <span className="text-3xl">🎓</span>
             </motion.div>
             <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent mb-2">
-              Join StudyGenius
+              Join StudySphere AI
             </h1>
             <p className="text-blue-100/80">Start your learning journey today</p>
           </motion.div>

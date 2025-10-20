@@ -1,4 +1,4 @@
-# 🎉 StudyGenius - Complete Setup Guide
+# 🎉 StudySphere AI - Complete Setup Guide
 
 Your AI-powered study web app is ready! Follow these steps to complete the setup.
 
@@ -8,7 +8,7 @@ Your AI-powered study web app is ready! Follow these steps to complete the setup
 1. ✅ **Beautiful Landing Page** - Hero section, features grid, stats
 2. ✅ **Authentication Pages** - Sign in & sign up (ready for Appwrite)
 3. ✅ **Dashboard** - Overview with stats, quick actions, progress tracking
-4. ✅ **AI Q&A Interface** - Voice input, LaTeX rendering, code highlighting
+4. ✅ **AI Q&A Interface** - Voice input, Markdown & LaTeX rendering, code highlighting
 5. ✅ **Reusable Components** - Navbar, Sidebar, Cards, Buttons, Inputs
 6. ✅ **Dark Mode Support** - Full theme system with next-themes
 7. ✅ **Framer Motion Animations** - Smooth transitions throughout
@@ -32,11 +32,11 @@ Your AI-powered study web app is ready! Follow these steps to complete the setup
 
 1. **Create Appwrite Project**
    - Go to https://cloud.appwrite.io
-   - Create a new project called "StudyGenius"
+   - Create a new project called "StudySphere AI"
    - Copy your Project ID
 
 2. **Create Database**
-   - Name: `studygenius`
+   - Name: `studysphere_ai`
    - Create the following collections:
 
 #### Collection: `users`
@@ -223,7 +223,7 @@ Edit `components/ui/button.tsx` and other components to change the gradient colo
 
 ### Change Branding
 1. Update the logo in layouts
-2. Change "StudyGenius" to your app name
+2. Change "StudySphere AI" to your app name
 3. Update metadata in `app/layout.tsx`
 
 ### Add Features
@@ -275,7 +275,7 @@ Add environment variables in Vercel dashboard.
 
 ## 🎉 You're All Set!
 
-Your StudyGenius app is ready with:
+Your StudySphere AI app is ready with:
 - ✅ Beautiful UI with animations
 - ✅ AI-powered Q&A system
 - ✅ Authentication pages

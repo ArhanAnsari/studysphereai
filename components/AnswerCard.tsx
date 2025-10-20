@@ -5,11 +5,7 @@ import { motion } from 'framer-motion';
 import { Copy, Check, Volume2, BookmarkPlus, FileText } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import ReactMarkdown from 'react-markdown';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import 'katex/dist/katex.min.css';
-import { InlineMath, BlockMath } from 'react-katex';
+import { ContentRenderer } from '@/components/ContentRenderer';
 
 interface AnswerCardProps {
   question: string;
@@ -30,6 +26,12 @@ export function AnswerCard({
 }: AnswerCardProps) {
   const [copied, setCopied] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
+
+  const difficultyColors = {
+    easy: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
+    medium: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200',
+    hard: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200',
+  };
 
   const handleCopy = () => {
     navigator.clipboard.writeText(answer);
@@ -59,51 +61,6 @@ export function AnswerCard({
     };
   }, []);
 
-  const difficultyColors = {
-    easy: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
-    medium: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200',
-    hard: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200',
-  };
-
-  // Process answer to handle LaTeX
-  const processLatex = (text: string) => {
-    const parts: React.ReactNode[] = [];
-    let lastIndex = 0;
-    
-    // Match block math ($$...$$)
-    const blockMathRegex = /\$\$([\s\S]*?)\$\$/g;
-    let match;
-    
-    while ((match = blockMathRegex.exec(text)) !== null) {
-      // Add text before math
-      if (match.index > lastIndex) {
-        parts.push(text.substring(lastIndex, match.index));
-      }
-      // Add block math
-      parts.push(<BlockMath key={match.index} math={match[1]} />);
-      lastIndex = match.index + match[0].length;
-    }
-    
-    // Add remaining text and process inline math
-    const remaining = text.substring(lastIndex);
-    const inlineMathRegex = /\$(.*?)\$/g;
-    let lastInlineIndex = 0;
-    
-    while ((match = inlineMathRegex.exec(remaining)) !== null) {
-      if (match.index > lastInlineIndex) {
-        parts.push(remaining.substring(lastInlineIndex, match.index));
-      }
-      parts.push(<InlineMath key={`inline-${match.index}`} math={match[1]} />);
-      lastInlineIndex = match.index + match[0].length;
-    }
-    
-    if (lastInlineIndex < remaining.length) {
-      parts.push(remaining.substring(lastInlineIndex));
-    }
-    
-    return parts.length > 0 ? parts : text;
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
@@ -132,31 +89,7 @@ export function AnswerCard({
         </CardHeader>
 
         <CardContent className="pt-6">
-          <div className="prose prose-sm dark:prose-invert max-w-none mb-4">
-            <ReactMarkdown
-              components={{
-                code({ node, inline, className, children, ...props }: any) {
-                  const match = /language-(\w+)/.exec(className || '');
-                  return !inline && match ? (
-                    <SyntaxHighlighter
-                      style={vscDarkPlus as any}
-                      language={match[1]}
-                      PreTag="div"
-                      {...props}
-                    >
-                      {String(children).replace(/\n$/, '')}
-                    </SyntaxHighlighter>
-                  ) : (
-                    <code className={className} {...props}>
-                      {children}
-                    </code>
-                  );
-                },
-              }}
-            >
-              {answer}
-            </ReactMarkdown>
-          </div>
+          <ContentRenderer content={answer} supportMarkdown={true} supportLatex={true} className="mb-4" />
 
           <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-200 dark:border-gray-800">
             <Button size="sm" variant="outline" onClick={handleCopy}>

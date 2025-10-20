@@ -44,8 +44,8 @@
 ### 1. Configure Appwrite (10 min)
 ```
 1. Go to: https://cloud.appwrite.io
-2. Create project "StudyGenius"
-3. Create database "studygenius"
+2. Create project "StudySphere AI"
+3. Create database "studysphere_ai"
 4. Create 6 collections (see SETUP_GUIDE.md)
 5. Enable Email/Google/Anonymous auth
 6. Copy Project ID & API Key

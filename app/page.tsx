@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Brain, Sparkles, Target, BookOpen, Zap, Users } from 'lucide-react';
+import { Logo } from '@/components/Logo';
 
 export default function Home() {
   const router = useRouter();
@@ -53,20 +54,18 @@ export default function Home() {
         >
           {/* Logo */}
           <div className="flex justify-center mb-6">
-            <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center text-white font-bold text-3xl shadow-2xl">
-              SG
-            </div>
+            <Logo size="lg" showText={false} />
           </div>
 
           {/* Heading */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-              StudyGenius
+              StudySphere AI
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-4 max-w-3xl mx-auto">
-            Your AI-Powered Study Companion
+            Your Intelligent Study Companion
           </p>
           
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">

@@ -1,11 +1,11 @@
-# StudyGenius - Project Documentation
+# StudySphere AI - Project Documentation
 
 ## 🚀 Project Overview
-StudyGenius is an AI-powered study web application that helps students instantly solve doubts, learn concepts visually, and track their progress.
+StudySphere AI is an AI-powered study web application that helps students instantly solve doubts, learn concepts visually, and track their progress with advanced Markdown and LaTeX support.
 
 ## 📁 Project Structure
 ```
-studygenius/
+studysphere-ai/
 ├── app/
 │   ├── layout.tsx          # Root layout with theme provider
 │   ├── page.tsx            # Landing page ✅
@@ -66,7 +66,7 @@ studygenius/
 
 ### 1. Configure Appwrite
 1. Create an Appwrite project at https://cloud.appwrite.io
-2. Create a database named "studygenius"
+2. Create a database named "studysphere_ai"
 3. Create collections:
    - **users**: userId (string), name (string), email (string), level (integer), xp (integer), streak (integer), lastActivity (datetime), badges (array)
    - **questions**: userId (string), question (string), answer (string), subject (string), difficulty (enum), mode (enum), hasVisual (boolean), createdAt (datetime)

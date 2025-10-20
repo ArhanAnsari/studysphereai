@@ -1,4 +1,4 @@
-# StudyGenius - Complete Authentication & CRUD Implementation
+# StudySphere AI - Complete Authentication & CRUD Implementation
 
 ## 🎉 Completed Features
 
@@ -144,7 +144,7 @@
 ## 📁 File Structure
 
 ```
-studygenius/
+studysphere-ai/
 ├── lib/
 │   ├── appwrite-service.ts       ✅ NEW - Comprehensive service layer (950+ lines)
 │   ├── auth-context.tsx           ✅ UPDATED - Uses new service
@@ -221,7 +221,7 @@ studygenius/
 ### Step 1: Create Appwrite Database ⚠️ REQUIRED
 Follow the detailed guide in `APPWRITE_SETUP.md`:
 
-1. Create database: `studygenius_db`
+1. Create database: `studysphere_ai_db`
 2. Create 6 collections:
    - users
    - questions
@@ -514,7 +514,7 @@ await storageService.deleteFile('avatars', file.$id);
 
 ## 🎉 Conclusion
 
-Your StudyGenius application now has:
+Your StudySphere AI application now has:
 - ✅ **Complete authentication system** with modern UI
 - ✅ **Comprehensive CRUD operations** for all collections
 - ✅ **Spaced repetition algorithm** for flashcards

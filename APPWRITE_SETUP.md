@@ -1,6 +1,6 @@
-# Appwrite Database Setup Guide for StudyGenius
+# Appwrite Database Setup Guide for StudySphere AI
 
-This guide will help you set up the Appwrite database, collections, and storage buckets for StudyGenius.
+This guide will help you set up the Appwrite database, collections, and storage buckets for StudySphere AI.
 
 ## Prerequisites
 - Appwrite Cloud account (fra.cloud.appwrite.io)
@@ -9,8 +9,8 @@ This guide will help you set up the Appwrite database, collections, and storage 
 ## Database Setup
 
 ### 1. Create Database
-- Database ID: `studygenius_db`
-- Database Name: StudyGenius Database
+- Database ID: `studysphere_ai_db`
+- Database Name: StudySphere AI Database
 
 ## Collections Setup
 
@@ -253,8 +253,8 @@ This guide will help you set up the Appwrite database, collections, and storage 
 ### Step 2: Create Database
 1. Navigate to "Databases" in the left sidebar
 2. Click "Create Database"
-3. Enter Database ID: `studygenius_db`
-4. Enter Database Name: "StudyGenius Database"
+3. Enter Database ID: `studysphere_ai_db`
+4. Enter Database Name: "StudySphere AI Database"
 5. Click "Create"
 
 ### Step 3: Create Collections

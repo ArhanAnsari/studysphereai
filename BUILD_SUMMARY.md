@@ -1,4 +1,4 @@
-# 🎉 StudyGenius - Complete Build Summary
+# 🎉 StudySphere AI - Complete Build Summary
 
 ## ✅ **YOUR APP IS READY AND RUNNING!**
 
@@ -76,11 +76,11 @@ Visit: **http://localhost:3000**
 
 1. **Create Project:**
    - Go to https://cloud.appwrite.io
-   - Create project "StudyGenius"
+   - Create project "StudySphere AI"
    - Copy Project ID
 
 2. **Create Database:**
-   - Name: `studygenius`
+   - Name: `studysphere-ai`
    - Create 6 collections (see SETUP_GUIDE.md for schemas):
      - users
      - questions
@@ -121,7 +121,7 @@ Uncomment these lines:
 ## 📁 **Project Structure**
 
 ```
-studygenius/
+studysphere-ai/
 ├── app/
 │   ├── page.tsx              ✅ Landing page
 │   ├── layout.tsx            ✅ Root layout with theme
@@ -324,7 +324,7 @@ vercel --prod
 
 ## 🎉 **YOU'RE ALL SET!**
 
-Your StudyGenius app is:
+Your StudySphere AI app is:
 - ✅ **Fully functional** frontend
 - ✅ **AI-powered** with Gemini
 - ✅ **Beautiful UI** with animations

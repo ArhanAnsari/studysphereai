@@ -10,7 +10,7 @@ export const databases = new Databases(client);
 export const storage = new Storage(client);
 
 // Database and Collection IDs
-export const DATABASE_ID = process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID || 'studygenius_db';
+export const DATABASE_ID = process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID || 'studygenius';
 
 export const COLLECTIONS = {
   USERS: 'users',

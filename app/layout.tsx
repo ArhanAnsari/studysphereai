@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "StudyGenius - Your AI-Powered Study Companion",
-  description: "Get instant, accurate answers to your study questions with AI-powered explanations, flashcards, and study plans.",
+  title: "StudySphere AI - Your Intelligent Study Companion",
+  description: "Get instant, accurate answers to your study questions with AI-powered explanations, flashcards, study plans, and progress tracking. Learn smarter with StudySphere AI.",
 };
 
 export default function RootLayout({

@@ -271,7 +271,7 @@ function ProfilePageContent() {
                       </div>
                     ) : (
                       <p className="text-gray-500 dark:text-gray-400">
-                        Keep using StudyGenius to earn badges!
+                        Keep using StudySphere AI to earn badges!
                       </p>
                     )}
                   </CardContent>
